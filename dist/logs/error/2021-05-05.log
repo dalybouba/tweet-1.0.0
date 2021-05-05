@@ -1,0 +1,19 @@
+2021-05-05 12:36:20 error: [POST] /tweets >> StatusCode:: 500, Message:: ER_BAD_NULL_ERROR: Column 'content' cannot be null
+2021-05-05 12:36:22 error: [POST] /tweets >> StatusCode:: 500, Message:: ER_BAD_NULL_ERROR: Column 'content' cannot be null
+2021-05-05 16:59:32 error: [DELETE] /users/1 >> StatusCode:: 500, Message:: ER_ROW_IS_REFERENCED_2: Cannot delete or update a parent row: a foreign key constraint fails (`test`.`tweet_entity`, CONSTRAINT `FK_d377bf58d80dd7ea179f0b11554` FOREIGN KEY (`userId`) REFERENCES `user_entity` (`id`))
+2021-05-05 17:04:44 error: [DELETE] /users/1 >> StatusCode:: 500, Message:: ER_ROW_IS_REFERENCED_2: Cannot delete or update a parent row: a foreign key constraint fails (`test`.`tweet_entity`, CONSTRAINT `FK_d377bf58d80dd7ea179f0b11554` FOREIGN KEY (`userId`) REFERENCES `user_entity` (`id`))
+2021-05-05 17:06:33 error: [DELETE] /users/5 >> StatusCode:: 500, Message:: ER_ROW_IS_REFERENCED_2: Cannot delete or update a parent row: a foreign key constraint fails (`test`.`tweet_entity`, CONSTRAINT `FK_d377bf58d80dd7ea179f0b11554` FOREIGN KEY (`userId`) REFERENCES `user_entity` (`id`))
+2021-05-05 17:07:32 error: [DELETE] /users/5 >> StatusCode:: 500, Message:: ER_ROW_IS_REFERENCED_2: Cannot delete or update a parent row: a foreign key constraint fails (`test`.`tweet_entity`, CONSTRAINT `FK_d377bf58d80dd7ea179f0b11554` FOREIGN KEY (`userId`) REFERENCES `user_entity` (`id`))
+2021-05-05 17:19:21 error: [POST] /users >> StatusCode:: 409, Message:: You're email f@f.com already exists
+2021-05-05 17:20:45 error: [PUT] /users/2 >> StatusCode:: 500, Message:: ER_DUP_ENTRY: Duplicate entry '1@f.com' for key 'user_entity.IDX_415c35b9b3b6fe45a3b065030f'
+2021-05-05 17:21:07 error: [PUT] /users/2 >> StatusCode:: 500, Message:: ER_DUP_ENTRY: Duplicate entry '1@f.com' for key 'user_entity.IDX_415c35b9b3b6fe45a3b065030f'
+2021-05-05 17:21:24 error: [PUT] /users/2 >> StatusCode:: 500, Message:: ER_DUP_ENTRY: Duplicate entry '1@f.com' for key 'user_entity.IDX_415c35b9b3b6fe45a3b065030f'
+2021-05-05 17:21:32 error: [DELETE] /users/2 >> StatusCode:: 500, Message:: ER_ROW_IS_REFERENCED_2: Cannot delete or update a parent row: a foreign key constraint fails (`test`.`tweet_entity`, CONSTRAINT `FK_d377bf58d80dd7ea179f0b11554` FOREIGN KEY (`userId`) REFERENCES `user_entity` (`id`))
+2021-05-05 17:24:49 error: [DELETE] /users/2 >> StatusCode:: 500, Message:: ER_ROW_IS_REFERENCED_2: Cannot delete or update a parent row: a foreign key constraint fails (`test`.`tweet_entity`, CONSTRAINT `FK_d377bf58d80dd7ea179f0b11554` FOREIGN KEY (`userId`) REFERENCES `user_entity` (`id`))
+2021-05-05 17:35:06 error: [DELETE] /users/2 >> StatusCode:: 500, Message:: ER_ROW_IS_REFERENCED_2: Cannot delete or update a parent row: a foreign key constraint fails (`test`.`tweet_entity`, CONSTRAINT `FK_d377bf58d80dd7ea179f0b11554` FOREIGN KEY (`userId`) REFERENCES `user_entity` (`id`))
+2021-05-05 18:12:41 error: [GET] /users/100 >> StatusCode:: 409, Message:: You're not user
+2021-05-05 18:38:39 error: [GET] /users/2 >> StatusCode:: 409, Message:: You're not user
+2021-05-05 18:39:11 error: [PUT] /users/4 >> StatusCode:: 400, Message:: Unexpected token { in JSON at position 7
+2021-05-05 18:39:36 error: [PUT] /users/4 >> StatusCode:: 400, Message:: property createdAt should not exist, property updatedAt should not exist
+2021-05-05 18:39:47 error: [PUT] /users/4 >> StatusCode:: 400, Message:: Unexpected token } in JSON at position 168
+2021-05-05 21:10:06 error: [DELETE] /tweets/210 >> StatusCode:: 409, Message:: You're not a tweet

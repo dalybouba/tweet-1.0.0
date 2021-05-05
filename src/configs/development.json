@@ -1,0 +1,11 @@
+{
+    "env": "development",
+    "dbConfig": {
+        "host": "localhost",
+        "user": "root",
+        "password": "test",
+        "database": "test"
+    },
+    "secretKey": "secretKey"
+
+}

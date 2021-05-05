@@ -1,0 +1,2 @@
+2021-05-04 11:55:08 error: [POST] /tweets >> StatusCode:: 500, Message:: ER_TRUNCATED_WRONG_VALUE_FOR_FIELD: Incorrect integer value: '{"id":6,"email":"f@f.com","userName":"f","password":"$2b$10$ut5CzV3Zq2X0js5pP9n9Pe4vrESneFZnt5aVJmShsV5U2nYRgF0AW","createdAt":"' for column 'userId' at row 1
+2021-05-04 18:21:07 error: [POST] /tweets >> StatusCode:: 500, Message:: ER_TRUNCATED_WRONG_VALUE_FOR_FIELD: Incorrect integer value: '' for column 'userId' at row 1

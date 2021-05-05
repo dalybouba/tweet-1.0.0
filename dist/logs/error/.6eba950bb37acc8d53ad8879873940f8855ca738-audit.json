@@ -1,0 +1,34 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "C:\\Users\\User\\Desktop\\twetter\\tweet\\twetter\\dist\\logs\\error\\.6eba950bb37acc8d53ad8879873940f8855ca738-audit.json",
+    "files": [
+        {
+            "date": 1619878510432,
+            "name": "C:\\Users\\User\\Desktop\\twetter\\tweet\\twetter\\dist\\logs\\error\\2021-05-01.log",
+            "hash": "5e06435dc07c7e735c9416b545272622"
+        },
+        {
+            "date": 1619952521907,
+            "name": "C:\\Users\\User\\Desktop\\twetter\\tweet\\twetter\\dist\\logs\\error\\2021-05-02.log",
+            "hash": "15ab757ef44e057d13527b22028959fc"
+        },
+        {
+            "date": 1620026634757,
+            "name": "C:\\Users\\User\\Desktop\\twetter\\tweet\\twetter\\dist\\logs\\error\\2021-05-03.log",
+            "hash": "8890096d9de215b3c9417adbfbd7d87d"
+        },
+        {
+            "date": 1620122108209,
+            "name": "C:\\Users\\User\\Desktop\\twetter\\tweet\\twetter\\dist\\logs\\error\\2021-05-04.log",
+            "hash": "89a6bee9fc9d440947dbb18e697c6366"
+        },
+        {
+            "date": 1620167065122,
+            "name": "C:\\Users\\User\\Desktop\\twetter\\tweet\\twetter\\dist\\logs\\error\\2021-05-05.log",
+            "hash": "613a575962f3953cf42240e2822cca2c"
+        }
+    ]
+}
