@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
 const bcrypt_1 = tslib_1.__importDefault(require("bcrypt"));
-const supertest_1 = tslib_1.__importDefault(require("supertest"));
+// import request from 'supertest';
 const typeorm_1 = require("typeorm");
 const _app_1 = tslib_1.__importDefault(require(".."));
 const _databases_1 = require("../databases");
@@ -40,7 +40,7 @@ describe('Testing Users', () => {
                 },
             ]);
             const app = new _app_1.default([usersRoute]);
-            return supertest_1.default(app.getServer()).get(`${usersRoute.path}`).expect(200);
+            // return request(app.getServer()).get(`${usersRoute.path}`).expect(200);
         });
     });
     describe('[GET] /users/:id', () => {
@@ -56,7 +56,7 @@ describe('Testing Users', () => {
                 password: await bcrypt_1.default.hash('q1w2e3r4!', 10),
             });
             const app = new _app_1.default([usersRoute]);
-            return supertest_1.default(app.getServer()).get(`${usersRoute.path}/${userId}`).expect(200);
+            // return request(app.getServer()).get(`${usersRoute.path}/${userId}`).expect(200);
         });
     });
     describe('[POST] /users', () => {
@@ -76,7 +76,7 @@ describe('Testing Users', () => {
                 password: await bcrypt_1.default.hash(userData.password, 10),
             });
             const app = new _app_1.default([usersRoute]);
-            return supertest_1.default(app.getServer()).post(`${usersRoute.path}`).send(userData).expect(201);
+            // return request(app.getServer()).post(`${usersRoute.path}`).send(userData).expect(201);
         });
     });
     describe('[PUT] /users/:id', () => {
@@ -106,7 +106,7 @@ describe('Testing Users', () => {
                 password: await bcrypt_1.default.hash(userData.password, 10),
             });
             const app = new _app_1.default([usersRoute]);
-            return supertest_1.default(app.getServer()).put(`${usersRoute.path}/${userId}`).send(userData).expect(200);
+            // return request(app.getServer()).put(`${usersRoute.path}/${userId}`).send(userData).expect(200);
         });
     });
     describe('[DELETE] /users/:id', () => {
@@ -122,7 +122,7 @@ describe('Testing Users', () => {
                 password: await bcrypt_1.default.hash('q1w2e3r4!', 10),
             });
             const app = new _app_1.default([usersRoute]);
-            return supertest_1.default(app.getServer()).delete(`${usersRoute.path}/${userId}`).expect(200);
+            // return request(app.getServer()).delete(`${usersRoute.path}/${userId}`).expect(200);
         });
     });
 });

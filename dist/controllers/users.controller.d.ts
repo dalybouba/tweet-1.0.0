@@ -1,11 +1,10 @@
-import { NextFunction, Request, Response } from 'express';
 import userService from '../services/users.service';
 declare class UsersController {
     userService: userService;
-    getUsers: (req: Request, res: Response, next: NextFunction) => Promise<void>;
-    getUserById: (req: Request, res: Response, next: NextFunction) => Promise<void>;
-    createUser: (req: Request, res: Response, next: NextFunction) => Promise<void>;
-    updateUser: (req: Request, res: Response, next: NextFunction) => Promise<void>;
-    deleteUser: (req: Request, res: Response, next: NextFunction) => Promise<void>;
+    getUsers: (req: any, res: any, next: any) => Promise<void>;
+    getUserById: (req: any, res: any, next: any) => Promise<void>;
+    createUser: (req: any, res: any, next: any) => Promise<void>;
+    updateUser: (req: any, res: any, next: any) => Promise<void>;
+    deleteUser: (req: any, res: any, next: any) => Promise<void>;
 }
 export default UsersController;

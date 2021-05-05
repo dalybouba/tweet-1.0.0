@@ -1,12 +1,11 @@
-import { NextFunction, Request, Response } from 'express';
 import TweetService from '../services/tweets.service';
 declare class TweetsController {
     tweetService: TweetService;
-    getTweets: (req: Request, res: Response, next: NextFunction) => Promise<void>;
-    getTweetsById: (req: Request, res: Response, next: NextFunction) => Promise<void>;
-    createTweet: (req: Request, res: Response, next: NextFunction) => Promise<void>;
-    updateTweet: (req: Request, res: Response, next: NextFunction) => Promise<void>;
-    deleteTweet: (req: Request, res: Response, next: NextFunction) => Promise<void>;
-    getAlltweets: (req: Request, res: Response) => Promise<void>;
+    getTweets: (req: any, res: any, next: any) => Promise<void>;
+    getTweetsById: (req: any, res: any, next: any) => Promise<void>;
+    createTweet: (req: any, res: any, next: any) => Promise<void>;
+    updateTweet: (req: any, res: any, next: any) => Promise<void>;
+    deleteTweet: (req: any, res: any, next: any) => Promise<void>;
+    getAlltweets: (req: any, res: any) => Promise<void>;
 }
 export default TweetsController;

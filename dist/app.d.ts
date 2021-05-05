@@ -7,7 +7,7 @@ declare class App {
     env: string;
     constructor(routes: Routes[]);
     listen(): void;
-    getServer(): express.Application;
+    getServer(): any;
     private connectToDatabase;
     private initializeMiddlewares;
     private initializeRoutes;

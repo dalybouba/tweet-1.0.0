@@ -59,31 +59,11 @@ class TweetsController {
         };
         this.getAlltweets = async (req, res) => {
             let options = {};
-            if (req.query.s) {
-                options = Object.assign(Object.assign({}, options), { where: {
-                        $or: [
-                            { relations: ["user"] },
-                            { title: new RegExp(req.query.s.toString(), 'i') },
-                            { description: new RegExp(req.query.s.toString(), 'i') }
-                        ]
-                    } });
-            }
-            if (req.query.sort) {
-                options = Object.assign(Object.assign({}, options), { order: {
-                        //  id: req.query.sort.toString().toUpperCase()
-                        createdAt: "DESC"
-                    } });
-            }
             const tweetRepository = typeorm_1.getRepository(Tweet_entity_1.TweetEntity);
             const tweets = await tweetRepository.find({ relations: ["user"] });
             const page = parseInt(req.params.page || 1);
-            console.log("page", page);
             const numb = req.params;
-            console.log('numb', numb);
             const take = parseInt(numb.pageSize.replace(/[^\d\.]*/g, ''));
-            console.log('take', take);
-            console.log('param', req.params);
-            console.log(take);
             const total = await tweetRepository.count();
             const data = await tweetRepository.find(Object.assign(Object.assign({ relations: ["user"], order: {
                     //  id: req.query.sort.toString().toUpperCase()

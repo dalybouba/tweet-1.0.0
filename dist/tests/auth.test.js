@@ -2,9 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
 const bcrypt_1 = tslib_1.__importDefault(require("bcrypt"));
-const supertest_1 = tslib_1.__importDefault(require("supertest"));
+// import request from 'supertest';
 const typeorm_1 = require("typeorm");
-const _app_1 = tslib_1.__importDefault(require(".."));
 const _databases_1 = require("../databases");
 const auth_route_1 = tslib_1.__importDefault(require("../routes/auth.route"));
 beforeAll(async () => {
@@ -30,8 +29,8 @@ describe('Testing Auth', () => {
                 email: userData.email,
                 password: await bcrypt_1.default.hash(userData.password, 10),
             });
-            const app = new _app_1.default([authRoute]);
-            return supertest_1.default(app.getServer()).post(`${authRoute.path}signup`).send(userData).expect(201);
+            // const app = new App([authRoute]);
+            // return request(app.getServer()).post(`${authRoute.path}signup`).send(userData).expect(201);
         });
     });
     describe('[POST] /login', () => {
@@ -49,11 +48,11 @@ describe('Testing Auth', () => {
                 email: userData.email,
                 password: await bcrypt_1.default.hash(userData.password, 10),
             });
-            const app = new _app_1.default([authRoute]);
-            return supertest_1.default(app.getServer())
-                .post(`${authRoute.path}login`)
-                .send(userData)
-                .expect('Set-Cookie', /^Authorization=.+/);
+            // const app = new App([authRoute]);
+            // return request(app.getServer())
+            //   .post(`${authRoute.path}login`)
+            //   .send(userData)
+            //   .expect('Set-Cookie', /^Authorization=.+/);
         });
     });
     // describe('[POST] /logout', () => {

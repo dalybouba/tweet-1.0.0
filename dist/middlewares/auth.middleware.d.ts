@@ -1,4 +1,3 @@
-import { NextFunction, Response } from 'express';
 import { RequestWithUser } from '../interfaces/auth.interface';
-declare const authMiddleware: (req: RequestWithUser, res: Response, next: NextFunction) => Promise<void>;
+declare const authMiddleware: (req: RequestWithUser, res: any, next: any) => Promise<void>;
 export default authMiddleware;

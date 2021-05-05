@@ -1,0 +1,14 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "C:\\Users\\User\\Desktop\\tweeter\\backend\\dist\\logs\\error\\.270c8667d8450d435a2aa8507a8a1712b91ea27b-audit.json",
+    "files": [
+        {
+            "date": 1620255128735,
+            "name": "C:\\Users\\User\\Desktop\\tweeter\\backend\\dist\\logs\\error\\2021-05-06.log",
+            "hash": "085033f5b24d2e02c35d028d392b5b04"
+        }
+    ]
+}
